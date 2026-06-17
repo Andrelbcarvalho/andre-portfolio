@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #0d1117;
+  color: #e6edf3;
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #161b22;
+}
+::-webkit-scrollbar-thumb {
+  background: #2F81F7;
+  border-radius: 3px;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #2F81F7, #00D4FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.glass {
+  background: rgba(22, 27, 34, 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(48, 54, 61, 0.6);
+}
+
+.glow {
+  box-shadow: 0 0 30px rgba(47, 129, 247, 0.15);
+}
+
+.glow-cyan {
+  box-shadow: 0 0 30px rgba(0, 212, 255, 0.15);
+}
+
+.card-hover {
+  transition: all 0.3s ease;
+}
+.card-hover:hover {
+  transform: translateY(-4px);
+  border-color: rgba(47, 129, 247, 0.5);
+  box-shadow: 0 12px 40px rgba(47, 129, 247, 0.15);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #2F81F7, #0066cc);
+  transition: all 0.3s ease;
+}
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(47, 129, 247, 0.4);
+}
+
+.btn-secondary {
+  border: 1px solid rgba(47, 129, 247, 0.5);
+  transition: all 0.3s ease;
+}
+.btn-secondary:hover {
+  background: rgba(47, 129, 247, 0.1);
+  border-color: #2F81F7;
+  transform: translateY(-2px);
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.grid-bg {
+  background-image: linear-gradient(rgba(47,129,247,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(47,129,247,0.04) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+.cursor-blink {
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+.shimmer {
+  background: linear-gradient(90deg, transparent, rgba(47,129,247,0.1), transparent);
+  background-size: 200% auto;
+  animation: shimmer 3s linear infinite;
+}
